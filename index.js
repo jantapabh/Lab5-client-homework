@@ -33,4 +33,6 @@ app.get('/computer', function (req, res) {
         })
 
 })
+
 app.listen(8000)
+console.log('8000 is the magic port');
