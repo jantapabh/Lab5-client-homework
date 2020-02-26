@@ -1,14 +1,16 @@
 <html>
-  <head>
-   
+
+<head>
+
     <!-- <link rel='stylesheet' href='css/mycss.css' /> -->
-  </head>
-    <h1> <%= foo %> </h1>
-    <ul>
-      <% computers.forEach(function(computer){ %>
-       <ol><%= computer.name %></ol> <img src= "<%= computer.images%>" /> 
-        <% }); %>
-    </ul>
+</head>
+
+<h1> <%= foo %> </h1>
+<ul>
+    <% computers.forEach(function(computer){ %>
+    <%= computer.name %><img src="<%= computer.images%>" />
+    <% }); %>
+</ul>
 
 
-    </html>
+</html>
