@@ -62,7 +62,7 @@ app.post('/admin', urlencodedParser, function (req, res) {
 });
 
 
-// Session
+// การ Router
 
 app.get('/logout', (req, res) => {
 
