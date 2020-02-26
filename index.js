@@ -17,8 +17,8 @@ app.get('/computer', function (req, res) {
                     images: 'https://www.howtogeek.com/wp-content/uploads/2020/01/win10-on-7-banner.png'
                 },
                 {   topic: '2',
-                    name: 'OSX    ',
-                    images: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/osx/elcapitan-update-software-app-store-hero-alt.jpg'
+                    name: 'OSX',
+                    images: 'https://www.siamvr.com/wp-content/uploads/2017/01/oculus-rift-apple-mac-osx-support.jpg'
                 },
                 {   topic: '3',
                     name: 'Andriod ',
