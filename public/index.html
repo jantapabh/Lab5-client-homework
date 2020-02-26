@@ -3,7 +3,7 @@
 <style>
     input[type=email],
     select {
-        width: 100%;
+        width: 50%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
@@ -14,27 +14,35 @@
 
     input[type=password] {
 
-        width: 100%;
+        width: 50%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
         border: 2px solid red;
         border-radius: 4px;
         box-sizing: border-box;
+        align-items: center;
     }
 
+
     input[type=submit] {
-        
+
         background-color: #4CAF50;
         color: white;
         padding: 12px 20px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        width: 30%;
+        align-items: center;
+
     }
 
     input[type=submit]:hover {
+
         background-color: #45a049;
+        align-items: center;
+
     }
 
     div {
@@ -42,6 +50,7 @@
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
+        
     }
 
     .container {
@@ -50,16 +59,17 @@
         padding: 20px;
     }
 </style>
-
 <body>
-    <div id="container">
+    <h1 align="center">REGISTER FORM</h1>
+    <div>
         <form action="/admin" method="post">
-            <label for="fname">Email : </label>
+            <label for="fname">Email : </label> <br /><br />
             <input type="email" id="fname" name="email" placeholder="Type your email" /> <br /><br />
-            <label for="lname">Password : </label>
+            <label for="lname">Password : </label> <br /><br />
             <input type="password" id="lname" name="pass" placeholder="Type your password" /><br /><br />
-            <button type="submit" value="Submit">submit</button>
+            <input type="submit" align="center" value="submit" />
         </form>
+
     </div>
 </body>
 
