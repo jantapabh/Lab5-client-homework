@@ -1,16 +1,18 @@
 <html>
+
 <head>
     <link rel='stylesheet' href='css/style.css' />
 </head>
 
-<h1> <%= foo %> </h1>
+<div align="left">
+    <h1>   &nbsp;  <%= foo %> </h1>
+    <ul>
+        <% computers.forEach(function(computer){ %>
+      <ol>  <%= computer.topic %> ) &nbsp; <%= computer.name %> 
+        <img src="<%= computer.images %>" width="150" height="90" hspace="50" align="middle" /> </ol> <br /> <br />
+        <% }); %>
+    </ul>
+</div>
 
-<ul>
-  
-    <% computers.forEach(function(computer){ %>
-        <%= computer.topic %> )    &nbsp;  <%= computer.name %>  &nbsp; &nbsp; <img src="<%= computer.images %>" width="100" height="70" hspace="50" />   <br /> <br />
-    <% }); %>
-    
-</ul>
 
 </html>

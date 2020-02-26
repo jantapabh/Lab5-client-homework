@@ -14,19 +14,19 @@ app.get('/computer', function (req, res) {
 
                 [{  topic: '1',
                     name: 'Windows',
-                    images: 'https://www.howtogeek.com/wp-content/uploads/2020/01/win10-on-7-banner.png'
+                    images: 'https://i.blogs.es/b5f220/win7/450_1000.jpg'
                 },
                 {   topic: '2',
                     name: 'OSX',
-                    images: 'https://www.siamvr.com/wp-content/uploads/2017/01/oculus-rift-apple-mac-osx-support.jpg'
+                    images: 'https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac/macos-mojave-get-software-hero.jpg'
                 },
                 {   topic: '3',
-                    name: 'Andriod ',
-                    images: 'https://www.flashfly.net/wp/wp-content/uploads/2019/01/android.jpg'
+                    name: 'Andriod',
+                    images: 'https://www.thaimobilecenter.com/home/img_stock/2019314_86797.jpg'
                 },
                 {   topic: '4',
-                    name: 'IOS     ',
-                    images: 'https://sites.google.com/site/jukkridrenji12/_/rsrc/1447515442900/rabb-ptibati-kar-ios/i6.png'
+                    name: 'IOS',
+                    images: 'https://i.pinimg.com/originals/0d/f5/9f/0df59f62e2c2b6371440d83c42248894.jpg'
                 }
 
                 ], foo: 'computer'
