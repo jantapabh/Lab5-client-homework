@@ -16,61 +16,79 @@ app.use(session({
 }))
 
 
-app.use(function (req, res, next) {
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(express.static(__dirname + '/public'));
 
-    var sess = req.session
 
-    if (sess.views) {
 
-        sess.views++
+// ส่วน ejs temple ที่ลิงค์ไปยัง admin
 
-    } else {
+app.get('/admin', function(req, res){
+    
+    res.render('admin',
+    {
+        users:
+            [{ 
+                
+                emails: 'jantapa2407@gmail.com',
+            }
 
-        sess.views = 1
-    }
+            ]
+    })
 
-    next();
-})
+ })
+ 
 
-app.get('/logout', (req, res) => {
-
-    req.session.destroy((err) => {
-
-        if (err) {
-            console.log(err);
-
-        } else {
-
-            res.redirect('/');
-        }
-    });
-});
-
+// หน้า login BodyParse ไปที่ index.html
 
 app.get('/', function (req, res) {
 
-    let password = "240311";
-
-    res.send(`<html><body>
-
-    <form>
-     Email : <input type="email" placeholder="Type your email" />
-     Password: <input type="number" placeholder="Type your password" />
-    </form>
-    <button type="submit">submit</button>
-    </body></html>`)
+    res.send('./public/index.html')  //เปิดไฟล์ index.html
 })
+
+//Session (req.session) ดึงค่าจากฟแร์มมาเช็ค
+
+app.post('/admin', urlencodedParser, function (req, res) {
+
+    var passWord = parseInt(req.body.pass);
+    var email = req.body.email + "";
+
+    
+  
+    if (passWord != 240311) {
+
+        res.send(`<html>
+
+        <h1>Please Login First.</h1>
+        
+        <a href='/'>Login</a>
+        
+        </html>`);
+
+    }
+    else {
+        
+        res.send(`<html><h1 style="align:center;">Hello ${email} </h1>
+        <a href='/logout'>Logout</a></body></html>`);
+        
+    }
+});
+
+
+// Session
 
 app.get('/logout', (req, res) => {
 
     req.session.destroy((err) => {
 
         if (err) {
+
             console.log(err);
+
         } else {
+
             res.redirect('/');
         }
-
     });
 });
 
