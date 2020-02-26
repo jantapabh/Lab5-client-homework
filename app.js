@@ -26,6 +26,13 @@ app.get('/', function (req, res) {
     res.send('./public/index.html')  //เปิดไฟล์ index.html
 })
 
+// ถ้าเข้าไปที่ admin แบบไม่ login
+
+app.get('/admin', function (req, res) {
+    res.render('admin')
+})
+
+
 //Session (req.session) ดึงค่าจากฟแร์มมาเช็ค
 
 app.post('/admin', urlencodedParser, function (req, res) {
@@ -33,8 +40,8 @@ app.post('/admin', urlencodedParser, function (req, res) {
     var passWord = parseInt(req.body.pass);
     var email = req.body.email + "";
 
-    
-  
+
+
     if (passWord != 240311) {
 
         res.send(`<html>
@@ -47,10 +54,10 @@ app.post('/admin', urlencodedParser, function (req, res) {
 
     }
     else {
-        
+
         res.send(`<html><h1 style="align:center;">Hello ${email} </h1>
         <a href='/logout'>Logout</a></body></html>`);
-        
+
     }
 });
 
