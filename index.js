@@ -13,19 +13,19 @@ app.get('/computer', function (req, res) {
 
                 [{
                     name: 'Windows',
-                    images: './public/Windows.png'
+                    images: 'https://appcenter.evernote.com/assets/img/apps/screenpresso/windows/screenpresso-windows-3.png'
                 },
                 {
                     name: 'OSX',
-                    images: './public/OSX.jpg'
+                    images: 'https://appcenter.evernote.com/assets/img/apps/screenpresso/windows/screenpresso-windows-3.png'
                 },
                 {
                     name: 'Andriod',
-                    images: './public/Andriod.jpg'
+                    images: 'https://appcenter.evernote.com/assets/img/apps/screenpresso/windows/screenpresso-windows-3.png'
                 },
                 {
                     name: 'IOS',
-                    images: './public/IOS.jpg'
+                    images: 'https://appcenter.evernote.com/assets/img/apps/screenpresso/windows/screenpresso-windows-3.png'
                 }
 
                 ], foo: 'computer'
