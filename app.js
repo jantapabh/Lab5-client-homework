@@ -15,29 +15,9 @@ app.use(session({
     saveUninitialized: false
 }))
 
-
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static(__dirname + '/public'));
 
-
-
-// ส่วน ejs temple ที่ลิงค์ไปยัง admin
-
-app.get('/admin', function(req, res){
-    
-    res.render('admin',
-    {
-        users:
-            [{ 
-                
-                emails: 'jantapa2407@gmail.com',
-            }
-
-            ]
-    })
-
- })
- 
 
 // หน้า login BodyParse ไปที่ index.html
 
