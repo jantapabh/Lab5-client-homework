@@ -1,17 +1,35 @@
 var express = require('express')
 var app = express()
 
-app.set('views', './views') //กำหนดโฟลเดอร์ที่เราเก็ย temple
+app.set('views', './views') //กำหนดโฟลเดอร์ที่เราเก็บ temple
 app.set('view engine', 'ejs')
 
-app.get('/computers', function (req, res) {
+app.get('/computer', function (req, res) {
+
+
     res.render('computer',
         {
-            computer:
-                [
-                    { name: 'windows',
-                      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRRc8QaIkpUIbhqUxlVjSU01eS1nSY90dQ6x1rzQRYtnAt8odEc' }, 
-                ]
+            computers:
+
+                [{
+                    name: 'Windows',
+                    images: './public/Windows.png'
+                },
+                {
+                    name: 'OSX',
+                    images: './public/OSX.jpg'
+                },
+                {
+                    name: 'Andriod',
+                    images: './public/Andriod.jpg'
+                },
+                {
+                    name: 'IOS',
+                    images: './public/IOS.jpg'
+                }
+
+                ], foo: 'computer'
         })
+
 })
 app.listen(8000)
